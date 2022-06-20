@@ -1,61 +1,165 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Git Branch
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# git globale e non locale fino ad ora COME LAVORARE IN GIT
+una volta creata la repo
+```
+settings -> collaborators -> Add people
+```
+_______________
+## chi è stato aggiunto riceve una mail
+e deve cliccare su
+```
+cliccare su -view invitation e poi cliccare su -accept invitation
+```
+_______________
+## ora bisogna clonare la repo ( per gli aiutanti )
 
-## About Laravel
+```
+cliccare su Code e copiare il link 
+link esempio:
+https://github.com/GianlucaGiovannini/htmlcss-dropbox.git
+```
+_______________
+## su vs code fare Clone Repository
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
+e copiare il link e poi aprirla
+```
+_______________
+## poi fare nel terminale
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```
+composer i
+```
+_______________
+## modificare il file.env.example
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```
+fare una copia del file env.example e rinominarlo .env
 
-## Learning Laravel
+```
+ora la riga 3 avrà la voce App_key e sarà vuota quindi fare nel terminale
+```
+php artisan key:generate
+```
+_______________
+## ora si installa le dipendenze npm
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```
+npm i
+npm i bootstrap
+ed ora si può fare : php artisan serve
+```
+_______________
+## ora il main deve creare le Issues
+andare sulla repo e cliccare su Issues
+```
+e creare una o più New issue
+```
+_______________
+## ora un aiutante va nella repo e clicca su Issues
+decide di assegnarsi una task quindi clicca su di una Issue e poi:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```
+sulla destra c'è assignees e assegnarsi la task
 
-## Laravel Sponsors
+e sotto write  scrive un commento tipo ci lavoro io
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+dopo di che dve creare una nuova branch su VScode
 
-### Premium Partners
+_______________
+## Creare una nuova branch
+- git branch 1-nome-feature (comando terminale)
+Specificare il numero della issue che si sta svolgendo 
+Ex: issue Create PageController => git branch 1-Create-PageController
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+## Spostarsi sulla branch creata
+- git checkout 1-nome-feature
+ora potete lavorare nella branch
 
-## Contributing
+## ora si va nella zona commit
+si aggiunge le modifiche all'area staging e ci copiamo il titolo della Issues
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
+si aggiunge le modifiche all'area staging e ci copiamo il titolo della Issues e ci si scrive 
+'titolo' close #1
 
-## Code of Conduct
+e si committa e si fa anche
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+PUBLISH BRANCH
+```
+_______________
+## poi si va sulla repo, su code e appare il pulsante pull request
 
-## Security Vulnerabilities
+```
+dopo di che cliccare - btn Create pull request  
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+_______________
+## ora il Main ( proprietario ) deve fare la code review 
+andare nella repo e avremo nella voce Pull request il numero delle modifiche da controllare ( code review )
+```
+cliccare sul numero a destra del commento del commit 
+es 795846
+```
+da qui possiamo aggiungere commenti alle righe di codice tramite il + e fai 
+```
+start review
+```
+poi se tutto va bene si può fare 
+```
+Finish your review
 
-## License
+e ci sono varie opzioni da selezionare 
+```
+se tutto va bene nelle opzioni che escono sopra cliccare su 
+```
+approve
+```
+poi 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+cliccare su merge pull request 
+e in seguenza 
+confim merge
+```
+_______________
+## ora cancellare  la branch dalla pagina dove siamo 
+
+```
+delete branch
+```
+_______________
+## l'aiutante ora deve cambiare branch su VScode
+
+```
+andare su branch e cliccare su  switch branch
+- git checkout main
+```
+
+una volta cambiata la branch e sei su main
+su commit fare la freccia in basso (Pull)
+```
+pull
+```
+ora si va source control e sull'icona di git graph
+```
+tasto destro su 1-layout e cancellare
+```
+ora in locale hai soltanto una branch, la main branch
+
+## passaggi da non dimenticare
+Quando si lavora in team e si collabora ad una stessa repo è importante seguire una certa prassi:
+1 all'inizio di ogni nuova implementazione, si fa pull e si crea un nuovo branch, a partire dal main
+
+2 si continua a lavorare e committare sul proprio branch
+3 al termine dello sviluppo si fa publish branch, ci si sposta sul branch main e attendi conferma dal capo,poi  si esegue un pull
+è importante aggiornare il proprio branch main locale con le modifiche che possono essere state pushate dagli altri
+collaboratori nel frattempo: così facendo si limitano i conflitti
+4 si esegue il merge (lo fa solo il capo per non creare problemi)
+
+5 si cancella il branch creato al punto 1
+
+6 si esegue il push
+e così via, si riparte dal primo punto...
