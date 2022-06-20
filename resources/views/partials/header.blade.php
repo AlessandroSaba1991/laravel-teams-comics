@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-8">
                     <ul>
-                        <li><a class="{{Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="{{route('characters')}}">characters</a></li>
+                        <li><a class="{{Route::currentRouteName() === '' ? 'active' : ''}}" href="{{route('guest.characters.index')}}">characters</a></li>
                         <li><a class="{{Route::currentRouteName() === 'comics.index' || Route::currentRouteName() === 'comics.show' ? 'active' : ''}}" href="{{route('guest.comics.index')}}">comics</a></li>
                         <li><a class="{{Route::currentRouteName() === 'movies' ? 'active' : ''}}" href="{{route('movies')}}">movies</a></li>
                         <li><a class="{{Route::currentRouteName() === 'tv' ? 'active' : ''}}" href="{{route('tv')}}">tv</a></li>

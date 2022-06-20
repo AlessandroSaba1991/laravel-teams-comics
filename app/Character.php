@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Character extends Model
 {
-    protected $fillable = ['title', 'thumb', 'description'];
+    protected $fillable = ['name', 'description', 'image'];
 }

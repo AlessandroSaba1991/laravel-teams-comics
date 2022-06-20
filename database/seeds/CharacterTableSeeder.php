@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Character;
-class CharacterSeeder extends Seeder
+use Illuminate\Database\Seeder;
+
+class CharacterTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,14 +12,14 @@ class CharacterSeeder extends Seeder
      */
     public function run()
     {
-       $characters = config('db.characters');
+        $characters = config('db.characters');
 
 
         foreach ($characters as $character) {
             $new_character = new Character();
-            $new_character->title = $character['title'];
-            $new_character->thumb = $character['thumb'];
+            $new_character->name = $character['name'];
             $new_character->description = $character['description'];
+            $new_character->image = $character['image'];
             $new_character->save();
         }
     }

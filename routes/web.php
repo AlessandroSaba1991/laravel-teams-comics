@@ -19,20 +19,10 @@ Route::get('/', function () {
 Route::get('/comics', 'Guest\ComicController@index')->name('guest.comics.index');
 Route::get('/comics/{comic}', 'Guest\ComicController@show')->name('guest.comics.show');
 
-Route::get('/characters', function () {
-    $characters= config('db.characters');
-    return view('characters',compact('characters'));
-})->name('characters');
+Route::get('/characters', 'Guest\CharacterController@index')->name('guest.characters.index');
+Route::get('/characters/{character}', 'Guest\CharacterController@show')->name('guest.characters.show');
 
-Route::get('/comics/{id}', function($id){
-    $comics = config('db.comics');
-    if($id >= 0 && is_numeric($id) && $id < count($comics)){
-       $comic = $comics[$id];
-       return view('comics.show',compact('comic'));
-   } else {
-       abort(404);
-   }
-})->name('comics.show');
+Route::resource('/admin/characters', 'Admin\CharacterController');
 
 Route::get('/movies', function () {
     return view('movies');

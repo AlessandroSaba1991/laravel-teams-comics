@@ -15,9 +15,9 @@ class CreateCharactersTable extends Migration
     {
         Schema::create('characters', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100);
-            $table->string('thumb')->nullable();
-            $table->text('description')->nullable();
+            $table->string('name', 100);
+            $table->string('description')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }
