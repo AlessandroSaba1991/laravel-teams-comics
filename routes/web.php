@@ -16,10 +16,8 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::get('/comics', function () {
-    $comics= config('db.comics');
-    return view('comics.index',compact('comics'));
-})->name('comics.index');
+Route::get('/comics', 'Guest\ComicController@index')->name('guest.comics.index');
+Route::get('/comics/{comic}', 'Guest\ComicController@show')->name('guest.comics.show');
 
 Route::get('/characters', function () {
     $characters= config('db.characters');
