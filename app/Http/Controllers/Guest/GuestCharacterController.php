@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Guest;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class GuestCharacterController extends Controller
+class CharacterController extends Controller
 {
     //
 }
