@@ -19443,9 +19443,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\MAMP\htdocs\Laravel\laravel-comics\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\MAMP\htdocs\Laravel\laravel-comics\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\Laravel\laravel-comics\resources\sass\comics_show.scss */"./resources/sass/comics_show.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/Laravel/laravel-teams-comics/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Applications/MAMP/htdocs/Laravel/laravel-teams-comics/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/Laravel/laravel-teams-comics/resources/sass/comics_show.scss */"./resources/sass/comics_show.scss");
 
 
 /***/ })
