@@ -13,10 +13,10 @@ class CharacterController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function list()
+    public function index()
     {
         $characters = Character::all();
-        return view('character.index', compact('characters'));
+        return view('guest.characters.index', compact('characters'));
     }
     
     /**
@@ -27,6 +27,6 @@ class CharacterController extends Controller
      */
     public function show(Character $character)
     {
-        return view('character.show', compact('character'));
+        return view('guest.characters.show', compact('character'));
     }
 }
