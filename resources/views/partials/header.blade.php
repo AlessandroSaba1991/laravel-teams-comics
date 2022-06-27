@@ -14,7 +14,7 @@
     <div class="bottom">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-0">
             <div class="container">
-                <a class="{{Route::currentRouteName() === 'home' ? 'active' : ''}}" href="{{route('home')}}">
+                <a class="{{Route::currentRouteName() === 'home' ? 'active' : ''}}" href="#">
                     <img width="80" src="{{asset('../img/dc-logo.png')}}" alt="logo DC" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

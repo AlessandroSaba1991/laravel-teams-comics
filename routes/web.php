@@ -67,5 +67,5 @@ Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->
 
 // Aggiungo alla fine // Modificato issue 14
 Route::get("{any?}", function(){
-    return view("guests.home");
+    return view("guest.index");
 })->where("any", ".*");
