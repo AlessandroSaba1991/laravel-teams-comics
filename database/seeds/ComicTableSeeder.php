@@ -1,6 +1,6 @@
 <?php
 
-use App\Comic;
+use App\Models\Comic;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
