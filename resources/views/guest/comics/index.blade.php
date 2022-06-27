@@ -8,7 +8,7 @@
         </div>
         <div class="row gy-4 row-cols-1 row-cols-md-3 row-cols-lg-6">
             @forelse($comics as $index => $comic)
-            <a href="{{route('comics.show',$index)}}">
+            <a href="{{route('comics.show', $comic->id)}}">
                 <div class="col">
                     <div class="comic">
                         <div class="img">
