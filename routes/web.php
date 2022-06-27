@@ -63,6 +63,9 @@ Auth::routes();
 Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
     // Admin dashboard
     Route::get('/', 'HomeController@index')->name('dashboard'); // Modificato issue 14
+    Route::resource('comics','ComicController')->parameters([
+        'comics' => 'comic:slug'
+    ]);
 });
 
 // Aggiungo alla fine // Modificato issue 14
