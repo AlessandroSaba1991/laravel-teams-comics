@@ -11,8 +11,8 @@
             </div>
         </div>
     </div>
-    <div class="bottom">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm p-0">
+    <div class="">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm bottom">
             <div class="container">
                 <a class="{{Route::currentRouteName() === 'home' ? 'active' : ''}}" href="#">
                     <img width="80" src="{{asset('../img/dc-logo.png')}}" alt="logo DC" />

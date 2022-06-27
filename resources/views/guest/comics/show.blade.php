@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{asset('css/comics_show.css')}}">
 @endsection
 @section('content')
+@include('partials.jumbo')
 <section class="single_comic">
     <div class="blue_line"></div>
     <div class="container sm_ py-5">

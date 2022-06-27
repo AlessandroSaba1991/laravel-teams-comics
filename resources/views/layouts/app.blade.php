@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('custom-css')
 </head>
 
 <body>
@@ -26,9 +27,10 @@
         @include('partials.header')
 
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
+        @include('partials.footer')
     </div>
 </body>
 
