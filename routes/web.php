@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+
 
 Route::get('/comics', 'Guest\ComicController@index')->name('guest.comics.index');
 Route::get('/comics/{comic}', 'Guest\ComicController@show')->name('guest.comics.show');
@@ -57,6 +56,16 @@ Route::get('/shop', function () {
 })->name('shop');
 
 
+
+// Esercizio 27/06
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::middleware('auth')->namespace('Admin')->name('admin.')->prefix('admin')->group(function(){
+    // Admin dashboard
+    Route::get('/', 'HomeController@index')->name('dashboard'); // Modificato issue 14
+});
+
+// Aggiungo alla fine // Modificato issue 14
+Route::get("{any?}", function(){
+    return view("guests.home");
+})->where("any", ".*");
