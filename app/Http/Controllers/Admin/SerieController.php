@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Admin\Comic;
-use App\Http\Controllers\Controller;
+use App\Models\Serie;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ComicController extends Controller
+class SerieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -42,10 +42,10 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Comic  $comic
+     * @param  \App\Models\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function show(Comic $comic)
+    public function show(Serie $serie)
     {
         //
     }
@@ -53,10 +53,10 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Comic  $comic
+     * @param  \App\Models\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Comic $comic)
+    public function edit(Serie $serie)
     {
         //
     }
@@ -65,10 +65,10 @@ class ComicController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Comic  $comic
+     * @param  \App\Models\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(Request $request, Serie $serie)
     {
         //
     }
@@ -76,10 +76,10 @@ class ComicController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Comic  $comic
+     * @param  \App\Models\Serie  $serie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comic $comic)
+    public function destroy(Serie $serie)
     {
         //
     }
