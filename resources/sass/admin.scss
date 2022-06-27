@@ -66,10 +66,16 @@ header {
     }
 }
 
-aside{
+.wrapper{
     height:calc(100vh - 55px);
-    a{
-        color: white;
+    aside{
+        a{
+            color: white;
+        }
+    }
+    main{
+        height: 100;
+        overflow-y: auto;
     }
 }
 

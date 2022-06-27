@@ -19616,11 +19616,15 @@ header .bottom .search input {
   border: none;
 }
 
-aside {
+.wrapper {
   height: calc(100vh - 55px);
 }
-aside a {
+.wrapper aside a {
   color: white;
+}
+.wrapper main {
+  height: 100;
+  overflow-y: auto;
 }
 
 main .hero_image {

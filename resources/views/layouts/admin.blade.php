@@ -72,9 +72,9 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
+        <div class="container-fluid wrapper">
             <div class="row ">
-                <aside class="col-3 bg-dark pt-4">
+                <aside class="col-2 bg-dark pt-4">
                     <ul class="list-unstyled">
                         <li><a href="{{Route('admin.dashboard')}}">Dashboard</a></li>
                         <li><a href="">Comics</a></li>
@@ -83,7 +83,7 @@
                     </ul>
                 </aside>
 
-                <main class="col">
+                <main class="col-10">
                     @yield('content')
                 </main>
             </div>
